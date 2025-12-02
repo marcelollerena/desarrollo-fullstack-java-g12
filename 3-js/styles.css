@@ -1,0 +1,29 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parrafoStyle {
+  color: green;
+  font-size: 20px;
+}
+
+.clone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card {
+  width: 200px;
+  background-color: aliceblue;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.card h3 {
+  text-decoration: underline;
+}
+
+.card .description {
+  font-size: 12px;
+}
