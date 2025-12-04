@@ -21,3 +21,6 @@ list.addEventListener("click", (event) => {
     event.target.remove();
   }
 });
+
+// EDIT
+// REMOVE
