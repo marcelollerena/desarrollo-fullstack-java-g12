@@ -1,6 +1,7 @@
-import type { Product } from "@/common/types";
 import { useEffect, useState } from "react";
-import { ProductCard } from "../components/product-card/product-card";
+import type { Product } from "@/common/types";
+
+import { ProductCard } from "@/features/products/components/product-card/product-card";
 
 export function Products() {
   const [products, setProducts] = useState<Product[]>([]);

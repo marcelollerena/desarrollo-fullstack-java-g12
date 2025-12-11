@@ -1,6 +1,8 @@
-import HomeScreen from "@/app/home/home";
-import ProductsScreen from "@/app/products/products";
 import { createBrowserRouter } from "react-router-dom";
+
+import HomeScreen from "@/app/home/home";
+import ProductScreen from "@/app/product/product";
+import ProductsScreen from "@/app/products/products";
 
 export const router = createBrowserRouter([
   {
@@ -10,5 +12,9 @@ export const router = createBrowserRouter([
   {
     path: "/products",
     element: <ProductsScreen />,
+  },
+  {
+    path: "/products/:id",
+    element: <ProductScreen />,
   },
 ]);
