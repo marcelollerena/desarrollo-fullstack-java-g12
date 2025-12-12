@@ -3,10 +3,13 @@ import { useParams } from "react-router-dom";
 
 import type { Product } from "@/common/types";
 import { Star } from "lucide-react";
+import { useCartStore } from "@/common/store/cart-store";
 
 export function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState<Product>();
+
+  const { addProductToCart } = useCartStore();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -37,7 +40,10 @@ export function Product() {
           </span>
 
           <p className="opacity-60">{product.description}</p>
-          <button className="bg-red-500 text-white w-3xs p-2 rounded-md">
+          <button
+            onClick={() => addProductToCart(product)}
+            className="bg-red-500 text-white w-3xs p-2 rounded-md"
+          >
             Agregar
           </button>
         </div>
